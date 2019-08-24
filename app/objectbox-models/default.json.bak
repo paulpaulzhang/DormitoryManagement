@@ -1,0 +1,345 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:5678575648970733304",
+      "lastPropertyId": "6:2605819365305509032",
+      "name": "Admin",
+      "properties": [
+        {
+          "id": "1:8199388311402897893",
+          "name": "id"
+        },
+        {
+          "id": "2:1775379429204333519",
+          "name": "username"
+        },
+        {
+          "id": "3:8326069204603695573",
+          "name": "password"
+        },
+        {
+          "id": "4:295061391722446852",
+          "name": "name"
+        },
+        {
+          "id": "5:2607291993614798054",
+          "name": "gender"
+        },
+        {
+          "id": "6:2605819365305509032",
+          "name": "tel"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:4573894485408359755",
+      "lastPropertyId": "3:5540333210312510542",
+      "name": "Building",
+      "properties": [
+        {
+          "id": "1:7246979322447028812",
+          "name": "id"
+        },
+        {
+          "id": "2:6536108382617002901",
+          "name": "name"
+        },
+        {
+          "id": "3:5540333210312510542",
+          "name": "introduction"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:1546085666796625094",
+      "lastPropertyId": "6:2866315441272501756",
+      "name": "Domitory",
+      "properties": [
+        {
+          "id": "1:3953078563635360044",
+          "name": "id"
+        },
+        {
+          "id": "2:8509434685488678705",
+          "name": "buildingId"
+        },
+        {
+          "id": "3:6211170321964606731",
+          "name": "name"
+        },
+        {
+          "id": "4:505706914983481161",
+          "name": "type"
+        },
+        {
+          "id": "5:1185618086116475734",
+          "name": "number"
+        },
+        {
+          "id": "6:2866315441272501756",
+          "name": "tel"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:4317690912016781850",
+      "lastPropertyId": "5:1487927454103370891",
+      "name": "Log",
+      "properties": [
+        {
+          "id": "1:1687927771479777350",
+          "name": "id"
+        },
+        {
+          "id": "2:2229908381399828495",
+          "name": "studentId"
+        },
+        {
+          "id": "3:1844577142313136739",
+          "name": "teacherId"
+        },
+        {
+          "id": "4:6185383342621864100",
+          "name": "date"
+        },
+        {
+          "id": "5:1487927454103370891",
+          "name": "remark"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:8455143643914221100",
+      "lastPropertyId": "4:7945646977671120232",
+      "name": "LostAndFound",
+      "properties": [
+        {
+          "id": "1:5454718534062339759",
+          "name": "id"
+        },
+        {
+          "id": "2:7361979684221968384",
+          "name": "register"
+        },
+        {
+          "id": "3:7896351262696885542",
+          "name": "detail"
+        },
+        {
+          "id": "4:7945646977671120232",
+          "name": "isClaim"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:3095717733043469755",
+      "lastPropertyId": "4:8443932331490482248",
+      "name": "Out",
+      "properties": [
+        {
+          "id": "1:4859911769795708939",
+          "name": "id"
+        },
+        {
+          "id": "2:6276289030936596528",
+          "name": "studentId"
+        },
+        {
+          "id": "3:1526693534910783656",
+          "name": "date"
+        },
+        {
+          "id": "4:8443932331490482248",
+          "name": "remark"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:5946091721437004921",
+      "lastPropertyId": "6:6495079108788562658",
+      "name": "Student",
+      "properties": [
+        {
+          "id": "1:3538189787438691557",
+          "name": "id"
+        },
+        {
+          "id": "2:7220713640704160088",
+          "name": "dormitoryId"
+        },
+        {
+          "id": "3:8413271281289159147",
+          "name": "username"
+        },
+        {
+          "id": "4:1642701341088678375",
+          "name": "password"
+        },
+        {
+          "id": "5:6660238758474843376",
+          "name": "name"
+        },
+        {
+          "id": "6:6495079108788562658",
+          "name": "gender"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:8449603484611849502",
+      "lastPropertyId": "6:4430783711211426900",
+      "name": "Teacher",
+      "properties": [
+        {
+          "id": "1:6769515936967539322",
+          "name": "id"
+        },
+        {
+          "id": "2:5319836716419843728",
+          "name": "username"
+        },
+        {
+          "id": "3:8351706341483445943",
+          "name": "password"
+        },
+        {
+          "id": "4:5937267368372686023",
+          "name": "name"
+        },
+        {
+          "id": "5:576654881129247646",
+          "name": "gender"
+        },
+        {
+          "id": "6:4430783711211426900",
+          "name": "tel"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "9:6271624307046884362",
+      "lastPropertyId": "3:6091694401313406637",
+      "name": "TeacherBuilding",
+      "properties": [
+        {
+          "id": "1:6768181285024315666",
+          "name": "id"
+        },
+        {
+          "id": "2:2944581557171493310",
+          "name": "teacherId"
+        },
+        {
+          "id": "3:6091694401313406637",
+          "name": "buildingId"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "10:872010098966567877",
+      "lastPropertyId": "4:2336381969755424001",
+      "name": "TroubleShooting",
+      "properties": [
+        {
+          "id": "1:2302089659109608382",
+          "name": "id"
+        },
+        {
+          "id": "2:8981187134767238734",
+          "name": "register"
+        },
+        {
+          "id": "3:1258147073741342680",
+          "name": "detail"
+        },
+        {
+          "id": "4:2336381969755424001",
+          "name": "isFix"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "12:4325444009216432092",
+      "lastPropertyId": "5:8323814228291466226",
+      "name": "Circle",
+      "properties": [
+        {
+          "id": "1:1393142714965798107",
+          "name": "id"
+        },
+        {
+          "id": "2:1219253974396389486",
+          "name": "title"
+        },
+        {
+          "id": "3:2315188859356233591",
+          "name": "content"
+        },
+        {
+          "id": "4:5952280182715217230",
+          "name": "date"
+        },
+        {
+          "id": "5:8323814228291466226",
+          "name": "pusher"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "13:3035300781338087988",
+      "lastPropertyId": "4:4632439520614356149",
+      "name": "Visitor",
+      "properties": [
+        {
+          "id": "1:4766320214909399935",
+          "name": "id"
+        },
+        {
+          "id": "2:7198262883819269454",
+          "name": "visitor"
+        },
+        {
+          "id": "3:7537645648258398348",
+          "name": "reason"
+        },
+        {
+          "id": "4:4632439520614356149",
+          "name": "tel"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "13:3035300781338087988",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [
+    6588323428854056609
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    7552163525540046828,
+    2800765758063892367,
+    782490619079067218,
+    6541302540889016027
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
