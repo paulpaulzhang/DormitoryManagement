@@ -2,6 +2,7 @@ package cn.paulpaulzhang.dormitorymanagement.model;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.annotation.Uid;
 
 /**
  * 包名: cn.paulpaulzhang.dormitorymanagement.database.model
@@ -9,6 +10,7 @@ import io.objectbox.annotation.Id;
  * 创建人: zlm31
  * 描述:
  */
+
 @Entity
 public class Admin {
     @Id
@@ -23,6 +25,8 @@ public class Admin {
     private String gender;
 
     private String tel;
+
+    private String avatarUrl;
 
     public Admin(String username, String password, String name, String gender, String tel) {
         this.username = username;
@@ -78,5 +82,13 @@ public class Admin {
 
     public void setTel(String tel) {
         this.tel = tel;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 }

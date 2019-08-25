@@ -4,6 +4,7 @@ import java.util.Date;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.annotation.Uid;
 
 /**
  * 包名: cn.paulpaulzhang.dormitorymanagement.database.model
@@ -11,24 +12,19 @@ import io.objectbox.annotation.Id;
  * 创建人: zlm31
  * 描述:
  */
+
 @Entity
 public class Log {
     @Id
     private long id;
 
-    private long studentId;
-
-    private long teacherId;
+    private String name;
 
     private Date date;
 
-    private String remark;
-
-    public Log(long studentId, long teacherId, Date date, String remark) {
-        this.studentId = studentId;
-        this.teacherId = teacherId;
+    public Log(String name, Date date) {
+        this.name = name;
         this.date = date;
-        this.remark = remark;
     }
 
     public long getId() {
@@ -39,20 +35,12 @@ public class Log {
         this.id = id;
     }
 
-    public long getStudentId() {
-        return studentId;
+    public String getName() {
+        return name;
     }
 
-    public void setStudentId(long studentId) {
-        this.studentId = studentId;
-    }
-
-    public long getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(long teacherId) {
-        this.teacherId = teacherId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getDate() {
@@ -61,13 +49,5 @@ public class Log {
 
     public void setDate(Date date) {
         this.date = date;
-    }
-
-    public String getRemark() {
-        return remark;
-    }
-
-    public void setRemark(String remark) {
-        this.remark = remark;
     }
 }

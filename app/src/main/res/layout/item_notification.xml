@@ -49,5 +49,13 @@
             android:textColor="@android:color/black"
             android:textSize="18sp"
             app:layout_constraintTop_toBottomOf="@id/tv_pusher" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_content" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

@@ -1,7 +1,11 @@
 package cn.paulpaulzhang.dormitorymanagement;
 
 
+import android.Manifest;
 import android.os.Bundle;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
@@ -13,8 +17,9 @@ import java.util.List;
 import butterknife.BindView;
 import cn.paulpaulzhang.dormitorymanagement.adapter.BottomNavViewPagerAdapter;
 import cn.paulpaulzhang.dormitorymanagement.base.BaseActivity;
+import pub.devrel.easypermissions.EasyPermissions;
 
-public class HomeActivity extends BaseActivity {
+public class HomeActivity extends BaseActivity implements EasyPermissions.PermissionCallbacks {
     @BindView(R2.id.bottom_navigation)
     AHBottomNavigation mBottomNavigation;
 
@@ -32,6 +37,7 @@ public class HomeActivity extends BaseActivity {
     @Override
     public void init(Bundle savedInstanceState) {
         initBottomNavigation();
+        requestPermissions();
     }
 
     private void initBottomNavigation() {
@@ -65,5 +71,20 @@ public class HomeActivity extends BaseActivity {
         mViewPager.setAdapter(mViewPagerAdapter);
         mViewPager.setCurrentItem(0);
         mBottomNavigation.setCurrentItem(0);
+    }
+
+    private void requestPermissions() {
+        EasyPermissions.requestPermissions(this, "应用需要存取图片", 1000,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE);
+    }
+
+    @Override
+    public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
+
+    }
+
+    @Override
+    public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
+        Toast.makeText(this, "拒绝权限可能会影响使用，请前往设置开启所需权限", Toast.LENGTH_SHORT).show();
     }
 }

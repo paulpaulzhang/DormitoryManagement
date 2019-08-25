@@ -8,4 +8,35 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyMaterialButton.OutLine.Blue" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/colorAccent</item>
+        <item name="rippleColor">#FF9e9e9e</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <!--去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--悬浮-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--隐藏标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--允许模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--全屏-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Matisse.Zhihu.Custom" parent="Matisse.Zhihu">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="toolbar">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="bottomToolbar.apply.textColor">@color/colorAccent</item>
+        <item name="preview.bottomToolbar.apply.textColor">@color/colorAccent</item>
+        <item name="item.checkCircle.backgroundColor">@color/colorAccent</item>
+    </style>
+
 </resources>

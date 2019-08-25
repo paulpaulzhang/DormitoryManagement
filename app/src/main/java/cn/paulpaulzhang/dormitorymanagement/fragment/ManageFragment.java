@@ -1,5 +1,6 @@
 package cn.paulpaulzhang.dormitorymanagement.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -17,6 +18,15 @@ import java.util.List;
 import butterknife.BindView;
 import cn.paulpaulzhang.dormitorymanagement.R;
 import cn.paulpaulzhang.dormitorymanagement.R2;
+import cn.paulpaulzhang.dormitorymanagement.activity.BuildingActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.DormitoryActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.FaultActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.LostFoundActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.ManageActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.OutActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.StudentActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.TeacherActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.VisitorActivity;
 import cn.paulpaulzhang.dormitorymanagement.banner.BannerHolderCreator;
 import cn.paulpaulzhang.dormitorymanagement.base.BaseFragment;
 
@@ -61,41 +71,23 @@ public class ManageFragment extends BaseFragment {
     public void initView(Bundle savedInstanceState, View rootView) {
         initBanner(rootView);
 
-        mBuilding.setOnClickListener(v -> {
+        mBuilding.setOnClickListener(v -> startActivity(new Intent(getContext(), BuildingActivity.class)));
 
-        });
+        mFault.setOnClickListener(v -> startActivity(new Intent(getContext(), FaultActivity.class)));
 
-        mFault.setOnClickListener(v -> {
+        mHome.setOnClickListener(v -> startActivity(new Intent(getContext(), DormitoryActivity.class)));
 
-        });
+        mLostFound.setOnClickListener(v -> startActivity(new Intent(getContext(), LostFoundActivity.class)));
 
-        mHome.setOnClickListener(v -> {
+        mManage.setOnClickListener(v -> startActivity(new Intent(getContext(), ManageActivity.class)));
 
-        });
+        mOut.setOnClickListener(v -> startActivity(new Intent(getContext(), OutActivity.class)));
 
-        mLostFound.setOnClickListener(v -> {
+        mStudent.setOnClickListener(v -> startActivity(new Intent(getContext(), StudentActivity.class)));
 
-        });
+        mTeacher.setOnClickListener(v -> startActivity(new Intent(getContext(), TeacherActivity.class)));
 
-        mManage.setOnClickListener(v -> {
-
-        });
-
-        mOut.setOnClickListener(v -> {
-
-        });
-
-        mStudent.setOnClickListener(v -> {
-
-        });
-
-        mTeacher.setOnClickListener(v -> {
-
-        });
-
-        mVisitor.setOnClickListener(v -> {
-
-        });
+        mVisitor.setOnClickListener(v -> startActivity(new Intent(getContext(), VisitorActivity.class)));
     }
 
     @Override

@@ -4,6 +4,7 @@ import java.util.Date;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.annotation.Uid;
 
 /**
  * 包名: cn.paulpaulzhang.dormitorymanagement.model
@@ -25,11 +26,21 @@ public class Notification {
 
     private String pusher;
 
+    private String imageUrl;
+
     public Notification(String title, String content, Date date, String pusher) {
         this.title = title;
         this.content = content;
         this.date = date;
         this.pusher = pusher;
+    }
+
+    public Notification(String title, String content, Date date, String pusher, String imageUrl) {
+        this.title = title;
+        this.content = content;
+        this.date = date;
+        this.pusher = pusher;
+        this.imageUrl = imageUrl;
     }
 
     public long getId() {
@@ -70,5 +81,13 @@ public class Notification {
 
     public void setPusher(String pusher) {
         this.pusher = pusher;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

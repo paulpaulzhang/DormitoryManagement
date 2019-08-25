@@ -54,8 +54,8 @@ public class NotificationFragment extends BaseFragment {
         fab.setOnClickListener(v -> startActivity(new Intent(getContext(), CreateActivity.class)));
 
         swipeRefreshLayout.setOnRefreshListener(() -> {
-            Box<Notification> circleBox = ObjectBox.get().boxFor(Notification.class);
-            adapter.setNewData(circleBox.query().orderDesc(Notification_.date).build().find());
+            Box<Notification> notificationBox = ObjectBox.get().boxFor(Notification.class);
+            adapter.setNewData(notificationBox.query().orderDesc(Notification_.date).build().find());
             swipeRefreshLayout.setRefreshing(false);
         });
     }
@@ -66,9 +66,18 @@ public class NotificationFragment extends BaseFragment {
     }
 
     private void initRecyclerView() {
-        Box<Notification> circleBox = ObjectBox.get().boxFor(Notification.class);
-        adapter = new NotificationAdapter(R.layout.notification_item, circleBox.getAll());
+        Box<Notification> notificationBox = ObjectBox.get().boxFor(Notification.class);
+        adapter = new NotificationAdapter(R.layout.item_notification, notificationBox.query().orderDesc(Notification_.date).build().find());
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(adapter);
+
+        adapter.setOnItemLongClickListener((adapter, view, position) -> {
+            Notification notification = (Notification) adapter.getItem(position);
+            if (notification != null) {
+                notificationBox.remove(notification.getId());
+            }
+            adapter.remove(position);
+            return true;
+        });
     }
 }

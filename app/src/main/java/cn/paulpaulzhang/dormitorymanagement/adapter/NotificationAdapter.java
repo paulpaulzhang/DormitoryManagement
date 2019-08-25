@@ -4,12 +4,14 @@ import androidx.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.List;
 
 import cn.paulpaulzhang.dormitorymanagement.R;
 import cn.paulpaulzhang.dormitorymanagement.model.Notification;
 import cn.paulpaulzhang.dormitorymanagement.util.DateUtil;
+import cn.paulpaulzhang.dormitorymanagement.util.FairLogger;
 
 /**
  * 包名: cn.paulpaulzhang.dormitorymanagement.adapter
@@ -28,5 +30,8 @@ public class NotificationAdapter extends BaseQuickAdapter<Notification, BaseView
                 .setText(R.id.tv_pusher, item.getPusher())
                 .setText(R.id.tv_date, DateUtil.getTime(item.getDate()))
                 .setText(R.id.tv_content, item.getContent());
+        SimpleDraweeView draweeView = helper.getView(R.id.image);
+        draweeView.setImageURI(item.getImageUrl());
+        FairLogger.d(item.getImageUrl());
     }
 }
