@@ -2,6 +2,7 @@ package cn.paulpaulzhang.dormitorymanagement.fragment;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,9 +30,72 @@ public class ManageFragment extends BaseFragment {
     @BindView(R2.id.toolbar)
     Toolbar mToolbar;
 
+    @BindView(R2.id.ll_building)
+    LinearLayout mBuilding;
+
+    @BindView(R2.id.ll_fault)
+    LinearLayout mFault;
+
+    @BindView(R2.id.ll_home)
+    LinearLayout mHome;
+
+    @BindView(R2.id.ll_lost_found)
+    LinearLayout mLostFound;
+
+    @BindView(R2.id.ll_out)
+    LinearLayout mOut;
+
+    @BindView(R2.id.ll_manage)
+    LinearLayout mManage;
+
+    @BindView(R2.id.ll_student)
+    LinearLayout mStudent;
+
+    @BindView(R2.id.ll_teacher)
+    LinearLayout mTeacher;
+
+    @BindView(R2.id.ll_visitor)
+    LinearLayout mVisitor;
+
     @Override
     public void initView(Bundle savedInstanceState, View rootView) {
         initBanner(rootView);
+
+        mBuilding.setOnClickListener(v -> {
+
+        });
+
+        mFault.setOnClickListener(v -> {
+
+        });
+
+        mHome.setOnClickListener(v -> {
+
+        });
+
+        mLostFound.setOnClickListener(v -> {
+
+        });
+
+        mManage.setOnClickListener(v -> {
+
+        });
+
+        mOut.setOnClickListener(v -> {
+
+        });
+
+        mStudent.setOnClickListener(v -> {
+
+        });
+
+        mTeacher.setOnClickListener(v -> {
+
+        });
+
+        mVisitor.setOnClickListener(v -> {
+
+        });
     }
 
     @Override

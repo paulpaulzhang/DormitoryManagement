@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -55,5 +54,235 @@
             android:layout_height="200dp"
             app:canLoop="true" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/manage_margin_top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_building"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_dormitory" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="宿舍楼"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_home" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="寝室"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_out"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_out" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出入记录"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/manage_margin_top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_student"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_student_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="学生信息"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_manage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_tb" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="宿舍管理"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_teacher"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_teacher_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="管理员"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/manage_margin_top"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_fault"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_tools_hardware" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="故障报修"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_lost_found"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_lost_found" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="失物招领"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_visitor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/manage_icon_size"
+                    android:layout_height="@dimen/manage_icon_size"
+                    android:layout_marginBottom="@dimen/manage_margin_bottom"
+                    android:src="@drawable/ic_visitor" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="访客登记"
+                    android:textSize="@dimen/manage_text_size"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

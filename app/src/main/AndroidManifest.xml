@@ -20,6 +20,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CreateActivity" />
+        <activity android:name=".activity.BuildingActivity" />
+        <activity android:name=".activity.DormitoryActivity" />
+        <activity android:name=".activity.FaultActivity" />
+        <activity android:name=".activity.LostFoundActivity" />
+        <activity android:name=".activity.OutActivity" />
+        <activity android:name=".activity.StudentActivity" />
+        <activity android:name=".activity.TbActivity" />
+        <activity android:name=".activity.TeacherActivity" />
+        <activity android:name=".activity.VisitorActivity" />
     </application>
 
 </manifest>

@@ -10,7 +10,7 @@ import io.objectbox.annotation.Id;
  * 描述:
  */
 @Entity
-public class Domitory {
+public class Dormitory {
     @Id
     private long id;
 
@@ -24,7 +24,7 @@ public class Domitory {
 
     private String tel;
 
-    public Domitory(long buildingId, String name, String type, int number, String tel) {
+    public Dormitory(long buildingId, String name, String type, int number, String tel) {
         this.buildingId = buildingId;
         this.name = name;
         this.type = type;
