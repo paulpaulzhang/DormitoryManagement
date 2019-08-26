@@ -97,9 +97,10 @@ public class ManageFragment extends BaseFragment {
 
     private void initBanner(View view) {
         List<Integer> data = new ArrayList<>();
-        data.add(R.drawable.ic_launcher_background);
-        data.add(R.drawable.ic_launcher_foreground);
-        data.add(R.drawable.ic_launcher_background);
+        data.add(R.mipmap.sysbg1);
+        data.add(R.mipmap.sysbg2);
+        data.add(R.mipmap.sysbg3);
+        data.add(R.mipmap.sysbg5);
 
         ConvenientBanner<Integer> mConvenientBanner = view.findViewById(R.id.banner);
         mConvenientBanner.setPages(new BannerHolderCreator(), data)
