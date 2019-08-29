@@ -40,7 +40,11 @@
         </provider>
 
         <activity android:name=".HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".activity.CreateActivity" />
         <activity android:name=".activity.BuildingActivity" />
@@ -54,11 +58,7 @@
         <activity android:name=".activity.VisitorActivity" />
         <activity android:name=".activity.SignUpActivity" />
         <activity android:name=".activity.SignInActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity
@@ -68,7 +68,15 @@
         <activity android:name=".activity.UserInfoActivity" />
         <activity android:name=".activity.LogActivity" />
         <activity android:name=".activity.TeacherEditActivity" />
-        <activity android:name=".activity.ManageActivity" />
+        <activity android:name=".activity.LostFoundCreateActivity" />
+        <activity android:name=".activity.FaultCreateActivity" />
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.VisitorEditActivity" />
+        <activity android:name=".activity.OutEditActivity" />
+        <activity android:name=".activity.BuildingEditActivity" />
+        <activity android:name=".activity.DormitoryEditActivity" />
+        <activity android:name=".activity.StudentEditActivity" />
+        <activity android:name=".activity.TbEditActivity" />
     </application>
 
 </manifest>

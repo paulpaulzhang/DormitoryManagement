@@ -2,6 +2,7 @@ package cn.paulpaulzhang.dormitorymanagement.model;
 
 import io.objectbox.annotation.Entity;
 import io.objectbox.annotation.Id;
+import io.objectbox.annotation.Uid;
 
 /**
  * 包名: cn.paulpaulzhang.dormitorymanagement.database.model
@@ -14,7 +15,7 @@ public class Dormitory {
     @Id
     private long id;
 
-    private long buildingId;
+    private String building;
 
     private String name;
 
@@ -24,8 +25,8 @@ public class Dormitory {
 
     private String tel;
 
-    public Dormitory(long buildingId, String name, String type, int number, String tel) {
-        this.buildingId = buildingId;
+    public Dormitory(String building, String name, String type, int number, String tel) {
+        this.building = building;
         this.name = name;
         this.type = type;
         this.number = number;
@@ -40,12 +41,12 @@ public class Dormitory {
         this.id = id;
     }
 
-    public long getBuildingId() {
-        return buildingId;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setBuildingId(long buildingId) {
-        this.buildingId = buildingId;
+    public void setBuildingId(String buildingId) {
+        this.building = buildingId;
     }
 
     public String getName() {

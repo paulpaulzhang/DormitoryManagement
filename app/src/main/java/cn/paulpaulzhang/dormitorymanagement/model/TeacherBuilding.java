@@ -14,13 +14,13 @@ public class TeacherBuilding {
     @Id
     private long id;
 
-    private long teacherId;
+    private String teacher;
 
-    private long buildingId;
+    private String building;
 
-    public TeacherBuilding(long teacherId, long buildingId) {
-        this.teacherId = teacherId;
-        this.buildingId = buildingId;
+    public TeacherBuilding(String teacher, String building) {
+        this.teacher = teacher;
+        this.building = building;
     }
 
     public long getId() {
@@ -31,19 +31,19 @@ public class TeacherBuilding {
         this.id = id;
     }
 
-    public long getTeacherId() {
-        return teacherId;
+    public String getTeacher() {
+        return teacher;
     }
 
-    public void setTeacherId(long teacherId) {
-        this.teacherId = teacherId;
+    public void setTeacher(String teacher) {
+        this.teacher = teacher;
     }
 
-    public long getBuildingId() {
-        return buildingId;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setBuildingId(long buildingId) {
-        this.buildingId = buildingId;
+    public void setBuilding(String building) {
+        this.building = building;
     }
 }

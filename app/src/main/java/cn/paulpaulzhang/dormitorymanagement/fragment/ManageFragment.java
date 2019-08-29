@@ -6,11 +6,10 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityOptionsCompat;
 
 import com.bigkoo.convenientbanner.ConvenientBanner;
-import com.google.android.material.appbar.MaterialToolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +21,10 @@ import cn.paulpaulzhang.dormitorymanagement.activity.BuildingActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.DormitoryActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.FaultActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.LostFoundActivity;
-import cn.paulpaulzhang.dormitorymanagement.activity.ManageActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.OutActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.SearchActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.StudentActivity;
+import cn.paulpaulzhang.dormitorymanagement.activity.TbActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.TeacherActivity;
 import cn.paulpaulzhang.dormitorymanagement.activity.VisitorActivity;
 import cn.paulpaulzhang.dormitorymanagement.banner.BannerHolderCreator;
@@ -56,7 +56,7 @@ public class ManageFragment extends BaseFragment {
     LinearLayout mOut;
 
     @BindView(R2.id.ll_manage)
-    LinearLayout mManage;
+    LinearLayout mTb;
 
     @BindView(R2.id.ll_student)
     LinearLayout mStudent;
@@ -66,6 +66,9 @@ public class ManageFragment extends BaseFragment {
 
     @BindView(R2.id.ll_visitor)
     LinearLayout mVisitor;
+
+    @BindView(R2.id.ll_search)
+    LinearLayout mSearch;
 
     @Override
     public void initView(Bundle savedInstanceState, View rootView) {
@@ -79,7 +82,7 @@ public class ManageFragment extends BaseFragment {
 
         mLostFound.setOnClickListener(v -> startActivity(new Intent(getContext(), LostFoundActivity.class)));
 
-        mManage.setOnClickListener(v -> startActivity(new Intent(getContext(), ManageActivity.class)));
+        mTb.setOnClickListener(v -> startActivity(new Intent(getContext(), TbActivity.class)));
 
         mOut.setOnClickListener(v -> startActivity(new Intent(getContext(), OutActivity.class)));
 
@@ -88,6 +91,9 @@ public class ManageFragment extends BaseFragment {
         mTeacher.setOnClickListener(v -> startActivity(new Intent(getContext(), TeacherActivity.class)));
 
         mVisitor.setOnClickListener(v -> startActivity(new Intent(getContext(), VisitorActivity.class)));
+
+        mSearch.setOnClickListener(v -> startActivity(new Intent(getContext(), SearchActivity.class), ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity()).toBundle()));
+
     }
 
     @Override

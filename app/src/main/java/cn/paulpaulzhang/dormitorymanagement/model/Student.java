@@ -14,7 +14,7 @@ public class Student {
     @Id(assignable = true)
     private long id;
 
-    private long dormitoryId;
+    private String dormitory;
 
     private String username;
 
@@ -24,9 +24,9 @@ public class Student {
 
     private String gender;
 
-    public Student(long id, long dormitoryId, String username, String password, String name, String gender) {
+    public Student(long id, String dormitory, String username, String password, String name, String gender) {
         this.id = id;
-        this.dormitoryId = dormitoryId;
+        this.dormitory = dormitory;
         this.username = username;
         this.password = password;
         this.name = name;
@@ -41,12 +41,12 @@ public class Student {
         this.id = id;
     }
 
-    public long getDormitoryId() {
-        return dormitoryId;
+    public String getDormitory() {
+        return dormitory;
     }
 
-    public void setDormitoryId(long dormitoryId) {
-        this.dormitoryId = dormitoryId;
+    public void setDormitory(String dormitory) {
+        this.dormitory = dormitory;
     }
 
     public String getUsername() {
